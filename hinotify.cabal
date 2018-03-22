@@ -30,6 +30,10 @@ library
         System.INotify.Masks
 
     ghc-options: -Wall
+
+    if os(openbsd)
+      extra-libraries: inotify
+
     includes: sys/inotify.h
     hs-source-dirs: src
 
